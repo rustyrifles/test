@@ -6,9 +6,9 @@
       ntp_servers:
         - 192.0.2.23
       provider:
-        password: secret
-        server: lb.mydomain.com
-        user: admin
+        password: F5_PASSWORD
+        server: F5_SERVER
+        user: F5_USER
   delegate_to: localhost
   - name: Hello World
     debug:
