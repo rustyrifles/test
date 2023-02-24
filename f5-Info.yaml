@@ -1,0 +1,9 @@
+---
+tasks:
+  - name: Collect info
+    bigip_device_info:
+      gather_subset:
+        - interfaces
+        - vlans
+
+
