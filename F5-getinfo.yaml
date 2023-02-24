@@ -1,11 +1,10 @@
 ---
 - hosts: all
   tasks:
-    - name: Collect info
-      bigip_device_info:
-        gather_subset:
-          - interfaces
-          - vlans
-    - name: Hello World
-      debug:
-        msg: Hello World
+  - name: Set NTP server
+    bigip_device_ntp:
+      ntp_servers:
+        - 192.0.2.23
+  - name: Hello World
+    debug:
+      msg: Hello World
