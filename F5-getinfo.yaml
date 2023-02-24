@@ -5,6 +5,11 @@
     bigip_device_ntp:
       ntp_servers:
         - 192.0.2.23
+      provider:
+        password: secret
+        server: lb.mydomain.com
+        user: admin
+  delegate_to: localhost
   - name: Hello World
     debug:
       msg: Hello World
