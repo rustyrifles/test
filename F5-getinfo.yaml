@@ -7,5 +7,5 @@
           - interfaces
           - vlans
     - name: Hello World
-        debug:
-          msg: Hello World
+      debug:
+        msg: Hello World
