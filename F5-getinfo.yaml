@@ -10,7 +10,7 @@
         password: F5_PASSWORD
         server: F5_SERVER
         user: F5_USER
-  delegate_to: localhost
+    delegate_to: localhost
   - name: Hello World
     debug:
       msg: Hello World
