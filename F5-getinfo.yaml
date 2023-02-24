@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  gather_facts: no 
   tasks:
   - name: Set NTP server
     bigip_device_ntp:
