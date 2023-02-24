@@ -11,7 +11,6 @@
         server: F5_SERVER
         user: F5_USER
         password: F5_PASSWORD
-  delegate_to: localhost
   - name: Hello World
     debug:
       msg: Hello World
