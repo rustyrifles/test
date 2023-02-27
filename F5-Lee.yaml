@@ -11,6 +11,7 @@
     - name: Show output
       debug:
         msg: "{{ command_output }}"
+      when: ansible_os_family == "RedHat"
 
     - name: Show OS
       debug:
