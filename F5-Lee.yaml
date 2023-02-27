@@ -5,4 +5,4 @@
       command: date
 
     - name: Start process
-      service:  name=httpd state=stopped
+      service:  name=httpd state=started
