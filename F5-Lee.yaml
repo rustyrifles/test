@@ -3,3 +3,6 @@
   tasks:
     - name: Run Command
       command: date
+
+    - name: Start process
+      service:  name=httpd state=started
