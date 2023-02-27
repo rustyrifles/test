@@ -11,3 +11,7 @@
     - name: Show output
       debug:
         msg: "{{ command_output }}"
+
+    - name: Show OS
+      debug:
+        msg: "{{ ansible_os_family }}"
