@@ -5,5 +5,6 @@ tasks:
       gather_subset:
         - interfaces
         - vlans
+        - vlans
 
 
