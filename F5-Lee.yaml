@@ -4,8 +4,10 @@
     - name: Run Command
       command: date
       register: command_output
-      
+
     - name: Start process
       service:  name=httpd state=started
 
-    
+    - name: Show output
+      debug:
+        msg: {{ command_output }}
