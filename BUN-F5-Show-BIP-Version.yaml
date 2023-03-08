@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  gather_facts: no
   tasks:
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
