@@ -2,12 +2,12 @@
 - name: GRAB F5 FACTS
   hosts: all
   connection: local
-  gather_facts: True
+  gather_facts: false
 
   tasks:
     - name: show hosts
       debug:
-        msg: "DEVICE:{{inventory_host}} USER:{{ansible_user}} PASSWORD:{{}}"
+        msg: "DEVICE:{{inventory_host}} USER:{{ansible_user}} PASSWORD:{{ansible_ssh_pass}}"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
