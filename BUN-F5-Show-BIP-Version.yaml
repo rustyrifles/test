@@ -2,11 +2,11 @@
 - hosts: all
   tasks:
     - name: Collect BIG-IP information
-    bigip_device_info:
-      gather_subset:
-        - interfaces
-        - vlans
-      provider:
-        server: lb.mydomain.com
-        user: admin
-        password: secret
+      bigip_device_info:
+        gather_subset:
+          - interfaces
+          - vlans
+        provider:
+          server: lb.mydomain.com
+          user: admin
+          password: secret
