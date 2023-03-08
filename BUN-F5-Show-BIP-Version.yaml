@@ -1,18 +1,13 @@
 ---
 - hosts: all
   tasks:
-    - name: Run Command
-      command: date
-      register: command_output
-
-    - name: Start process
-      service:  name=httpd state=started
-
-    - name: Show output
-      debug:
-        msg: "{{ command_output }}"
-      when: ansible_os_family == "RedHat"
-
-    - name: Show OS
-      debug:
-        msg: "{{ ansible_os_family }}"
+    - name: Collect BIG-IP information
+    bigip_device_info:
+      gather_subset:
+        - interfaces
+        - vlans
+      provider:
+        server: lb.mydomain.com
+        user: admin
+        password: secret
+    delegate_to: localhost
