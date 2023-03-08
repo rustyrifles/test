@@ -6,7 +6,7 @@
         gather_subset:
         - system-info
         provider:
-          password: "{{ F5_PASSWORD }}"
-          server: "{{ F5_SERVER }}"
-          user: "{{ F5_USER }}"
+          password: "{{ ansible_ssh_pass}}"
+          server: "{{ private_ip }}"
+          user: "{{ ansible_user }}"
       register: device_facts
