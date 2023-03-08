@@ -6,7 +6,7 @@
         gather_subset:
         - system-info
         provider:
-          server: {F5_SERVER}
-          user: {F5_USER}
-          password: {F5_PASSWORD}
+          password: "{{ bigip_password }}"
+          server: "{{ ansible_host }}"
+          user: "{{ bigip_username }}"
       register: device_facts
