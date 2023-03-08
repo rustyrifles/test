@@ -7,7 +7,7 @@
           - interfaces
           - vlans
       provider:
-          server: lb.mydomain.com
-          user: admin
-          password: secret
+          server: {f5-server}
+          user: {f5-user}
+          password: {f5-password}
       delegate_to: localhost
