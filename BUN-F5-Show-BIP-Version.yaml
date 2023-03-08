@@ -6,7 +6,3 @@
         gather_subset:
           - interfaces
           - vlans
-        provider:
-          server: lb.mydomain.com
-          user: admin
-          password: secret
