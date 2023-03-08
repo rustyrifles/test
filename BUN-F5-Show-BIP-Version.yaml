@@ -8,5 +8,5 @@
           - vlans
         provider:
             server: {f5-server}
-            user: {f5-user}
-            password: {f5-password}
+#           user: {f5-user}
+#           password: {f5-password}
