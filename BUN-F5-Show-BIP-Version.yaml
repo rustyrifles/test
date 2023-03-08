@@ -5,16 +5,16 @@
   gather_facts: True
 
   tasks:
- #   - name: show hosts
-  #    debug:
-   #     msg: "DEVICE:{{inventory_hostname}} USER:{{ansible_user}} PASSWORD:{{}}"
+    - name: show hosts
+      debug:
+        msg: "DEVICE:{{inventory_host}} USER:{{ansible_user}} PASSWORD:{{}}"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
         gather_subset:
           - system-info
         provider:
-          server: "{{inventory_hostname}}"
+          server: "{{inventory_host}}"
           user: "{{ansible_user}}"
           password: "{{ansible_ssh_pass}}"
           server_port: 443
