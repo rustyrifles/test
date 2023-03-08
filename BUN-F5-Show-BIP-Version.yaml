@@ -2,6 +2,7 @@
 - name: GRAB F5 FACTS
   hosts: all
   connection: local
+  ansible_python_interpreter: /usr/libexec/platform-python
   gather_facts: True
 
   tasks:
