@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+    - name: Run Command
+      command: date
+      register: command_output
+
+    - name: Start process
+      service:  name=httpd state=started
+
+    - name: Show output
+      debug:
+        msg: "{{ command_output }}"
+      when: ansible_os_family == "RedHat"
+
+    - name: Show OS
+      debug:
+        msg: "{{ ansible_os_family }}"
