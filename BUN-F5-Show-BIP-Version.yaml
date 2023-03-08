@@ -6,7 +6,7 @@
         gather_subset:
         - system-info
         provider:
-          server: F5_SERVER
-          user: F5_USER
-          password: F5_PASSWORD
+          server: {{F5_SERVER}}
+          user: {{F5_USER}}
+          password: {{F5_PASSWORD}}
       register: device_facts
