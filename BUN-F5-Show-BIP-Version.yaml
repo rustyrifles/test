@@ -5,6 +5,10 @@
   gather_facts: no
 
   tasks:
+    - name: show hosts
+      debug:
+        msg: "{{inventory_hostname}}"
+
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
         gather_subset:
