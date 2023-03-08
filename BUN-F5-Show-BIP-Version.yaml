@@ -7,7 +7,7 @@
   tasks:
    - name: show hosts
       debug:
-        msg: "DEVICE:{{ansible_host}} USER:{{ansible_user}} PASSWORD:{{}}"
+        msg: "DEVICE:{{ansible_host}} USER:{{ansible_user}} PASSWORD:{{ansible_ssh_pass}}"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
