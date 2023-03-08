@@ -10,4 +10,3 @@
           server: {f5-server}
           user: {f5-user}
           password: {f5-password}
-      delegate_to: localhost
