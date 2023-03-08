@@ -2,12 +2,12 @@
 - hosts: all
   gather_facts: no
   tasks:
-    - name: Collect BIG-IP information
+    - name: COLLECT BIG-IP FACTS
       bigip_device_info:
         gather_subset:
-          - interfaces
-          - vlans
- #       provider:
-  #          server: {f5-server}
-#           user: {f5-user}
-#           password: {f5-password}
+        - system-info
+        provider:
+          server: "{{private_ip}}"
+          user: "{{ansible_user}}"
+          password: "{{ansible_ssh_pass}}"
+      register: device_facts
