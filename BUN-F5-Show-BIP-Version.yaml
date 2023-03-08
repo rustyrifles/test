@@ -5,8 +5,9 @@
   gather_facts: no
 
   tasks:
-    - debug:
-        msg: "DEVICE:{{inventory_hostname}} USER:{{ansible_user}} PASSWORD:{{ansible_ssh_pass}}"
+    - name: show hosts
+      debug:
+        msg: "DEVICE:{{inventory_hostname}} USER:{{ansible_user}} PASSWORD:{{}}"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_info:
