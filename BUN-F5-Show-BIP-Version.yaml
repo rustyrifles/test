@@ -10,6 +10,7 @@
    #     msg: "DEVICE:{{inventory_hostname}} USER:{{ansible_user}} PASSWORD:{{}}"
 
     - name: COLLECT BIG-IP FACTS
+      ansible_python_interpreter: /usr/libexec/platform-python
       bigip_device_info:
         gather_subset:
           - system-info
