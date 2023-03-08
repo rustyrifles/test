@@ -9,4 +9,7 @@
 #          password: "{{ ansible_ssh_pass}}"
           server: "{{ inventory_hostname }}"
 #          user: "{{ ansible_user }}"
+          validate_certs: no
+          transport: cli
+          server_port: 22
       register: device_facts
