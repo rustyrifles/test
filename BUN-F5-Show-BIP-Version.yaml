@@ -7,6 +7,6 @@
         - system-info
         provider:
 #          password: "{{ ansible_ssh_pass}}"
-          server: F5_SERVER
+          server: "{{ ansible_name }}"
 #          user: "{{ ansible_user }}"
       register: device_facts
