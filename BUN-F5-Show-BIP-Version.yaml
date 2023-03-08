@@ -10,4 +10,3 @@
         server: lb.mydomain.com
         user: admin
         password: secret
-    delegate_to: localhost
