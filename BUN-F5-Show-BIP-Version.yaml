@@ -6,7 +6,7 @@
         gather_subset:
           - interfaces
           - vlans
-      provider:
-          server: {f5-server}
-          user: {f5-user}
-          password: {f5-password}
+        provider:
+            server: {f5-server}
+            user: {f5-user}
+            password: {f5-password}
