@@ -11,7 +11,7 @@
     - name: Output to a file
       copy:
         content: "{{ansible_user}}"
-        dest: "{{inventory_dir}}/output/{{inventory_hostname}}.nodes.json"
+        dest: "/etc/ansible/{{inventory_hostname}}.nodes.json"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_facts:
