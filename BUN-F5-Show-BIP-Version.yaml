@@ -2,7 +2,6 @@
 - name: GRAB F5 FACTS
   hosts: all
   connection: local
-  gather_facts: false
 
   tasks:
    - name: show hosts
