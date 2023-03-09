@@ -13,6 +13,10 @@
         content: "{{ansible_user}}"
         dest: "/etc/ansible/{{inventory_hostname}}.nodes.json"
 
+   - name: Output to a file details
+      debug:
+        msg: "/etc/ansible/{{inventory_hostname}}.nodes.json"
+
     - name: COLLECT BIG-IP FACTS
       bigip_device_facts:
         gather_subset:
