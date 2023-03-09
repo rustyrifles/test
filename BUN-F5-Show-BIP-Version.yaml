@@ -4,7 +4,7 @@
   connection: local
 
   tasks:
-   - name: show hosts
+    - name: show hosts
       debug:
         msg: "DEVICE:{{ansible_host}} USER:{{ansible_user}} PASSWORD:{{ansible_ssh_pass}}"
 
