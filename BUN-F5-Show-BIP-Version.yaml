@@ -9,7 +9,7 @@
         msg: "DEVICE:{{ansible_host}} USER:{{ansible_user}} PASSWORD:{{ansible_ssh_pass}}"
 
     - name: COLLECT BIG-IP FACTS
-      bigip_device_info:
+      bigip_device_facts:
         gather_subset:
           - system-info
         provider:
