@@ -11,11 +11,11 @@
     - name: Output to a file
       copy:
         content: "{{ansible_user}}"
-        dest: "/tmp/n{{inventory_hostname}}-nodes.json"
+        dest: "/tmp/n{{inventory_hostname}}-f5.txt"
 
     - name: Output to a file details
       debug:
-        msg: "/tmp/n{{inventory_hostname}}-nodes.json"
+        msg: "/tmp/n{{inventory_hostname}}-f5.txt"
 
     - name: COLLECT BIG-IP FACTS
       bigip_device_facts:
